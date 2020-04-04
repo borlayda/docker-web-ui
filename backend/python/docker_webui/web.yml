@@ -1,0 +1,34 @@
+---
+# This is the definition of the MLP WebUI backend service REST interface.
+# Format:
+# Every element in the endpoints list is a new URI for the service
+#   name:     The name of the endpoint, for documentation puposes.
+#   uri:      The endpoint uri with templates for Flask decorator. It's like
+#             the category name + the uri.
+#   request:  The format of the request body.
+#   response: The format of the endpoint result (JSON kind).
+#   method:   The business logic namespace and method name.
+endpoints:
+  container:
+    - name: Get running containers
+      uri: ""
+      function: "docker_webui.backend.container.get_containers"
+      methods:
+        - GET
+      request:
+        name: str
+        all: str
+        type: str
+      response:
+        containers: list
+  image:
+    - name: "List images"
+      uri: ""
+      function: "docker_webui.backend.image.get_images"
+      methods:
+        - GET
+      request:
+        name: str
+        all: bool
+      response:
+        images: list

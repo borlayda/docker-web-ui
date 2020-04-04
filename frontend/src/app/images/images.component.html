@@ -1,0 +1,7 @@
+<div class="imageList">
+  <div *ngFor="let image of images" class="imageBox">
+    <h3>{{ image.repository }}:{{ image.tag }} ({{ image.id }})</h3>
+    <p>Size: {{ image.size }}</p>
+    <p>Start time: {{ image.creation_date }}</p>
+  </div>
+</div>

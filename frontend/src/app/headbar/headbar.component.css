@@ -1,0 +1,80 @@
+.headbar {
+  width: 68px;
+  height: 100%;
+  background-color: #1976d2;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  animation-name: close;
+  animation-duration: 1s;
+}
+
+.headbar:hover {
+  width: 168px;
+  animation-name: open;
+  animation-duration: 1s;
+}
+
+@keyframes open {
+  from {width: 68px;}
+  to {width: 168px;}
+}
+@keyframes close {
+  from {width: 168px;}
+  to {width: 68px;}
+}
+
+.headbar h1 {
+  color: white;
+  margin: 0;
+}
+
+.headBarLink {
+  color: white;
+  padding-top: 15px;
+}
+
+.fancy-button {
+  background-color: white;
+  color: #1976d2;
+}
+
+.fancy-button i.material-icons {
+  color: #1976d2;
+  padding-right: 4px;
+}
+
+
+.button, button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 2px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+}
+
+.button:hover, button:hover {
+  opacity: 0.8;
+  font-weight: normal;
+}
+
+.button:disabled, button:disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+a {
+  cursor: pointer;
+  color: #1976d2;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}

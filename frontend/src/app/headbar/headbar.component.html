@@ -1,0 +1,12 @@
+<div (mouseenter)="wide=true" (mouseleave)="wide=false" class="headbar">
+  <a [routerLink]="['/']">
+    <h1 *ngIf="!wide">D</h1>
+    <h1 *ngIf="wide">DockerUI</h1>
+  </a>
+  <a class="headBarLink" [routerLink]="['/containers']">
+    <span><i class="material-icons">layers</i><span *ngIf="wide"> Containers</span></span>
+  </a>
+  <a class="headBarLink" [routerLink]="['/images']">
+    <span><i class="material-icons">apps</i><span *ngIf="wide"> Images</span></span>
+  </a>
+</div>

@@ -1,0 +1,10 @@
+<div class="containerList">
+  <div *ngFor="let container of containers" class="containerBox">
+    <h3>{{ container.name }} ({{ container.id }})</h3>
+    <p>Image: <a href="/images/{{ container.image }}">{{ container.image }}</a></p>
+    <p>Status: {{ container.status }}</p>
+    <p>Start time: {{ container.creation_date }}</p>
+    <p>Start command: {{ container.command }}</p>
+    <p>Open ports: {{ container.ports.join(', ') }}</p>
+  </div>
+</div>

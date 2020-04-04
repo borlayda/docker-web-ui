@@ -1,0 +1,19 @@
+* {
+  font-family: 'Roboto', Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+
+router-outlet + *  {
+  padding: 0 16px;
+  margin-left: 70px;
+}
